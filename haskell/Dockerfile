@@ -12,19 +12,14 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu raring main restricted universe m
 RUN apt-get update
 
 # install the Haskell environment
-# RUN apt-get install -y ghc
-RUN wget http://www.haskell.org/ghc/dist/7.6.3/ghc-7.6.3-src.tar.bz2
-RUN tar xjvf ghc-7.6.3-src.tar.bz2
-RUN cd ghc-7.6.3
-RUN ./configure
-RUN make
-RUN make install
-RUN rm ghc-7.6.3-src.tar.bz2
-RUN rm -fr ghc-7.6.3
+RUN apt-get install -y ghc
+
+# install Cabal
+RUN apt-get -u install cabal-install
 
 # Update Cabal package list
-RUN cabal update
+#RUN cabal update
 
-# Install cabal-install
-RUN cabal install cabal-install
+# Upgrade cabal-install
+#RUN cabal install cabal cabal-install
 

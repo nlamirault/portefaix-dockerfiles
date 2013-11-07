@@ -1,5 +1,5 @@
 #
-# OCaml container.
+# Go container.
 # Version: 0.1.0
 #
 
@@ -11,17 +11,6 @@ MAINTAINER Nicolas Lamirault <nicolas.lamirault@gmail.com>
 RUN echo "deb http://archive.ubuntu.com/ubuntu raring main restricted universe multiverse" > /etc/apt/sources.list
 RUN apt-get update
 
-# install tools
-RUN apt-get install -y python-software-properties software-properties-common
-
-# Install OCaml
-RUN apt-get install -y ocaml ocaml-findlib
-
-# Install Oasis
-RUN apt-get install -y oasis
-
-# Install OPAM
-#RUN add-apt-repository -y ppa:avsm/ppa
-#RUN apt-get update
-#RUN apt-get install -y opam
+# Install Go
+RUN apt-get install -y golang golang-go golang-doc golang-src
 

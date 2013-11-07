@@ -9,9 +9,13 @@ MAINTAINER Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 # make sure the package repository is up to date
 RUN echo "deb http://archive.ubuntu.com/ubuntu raring main restricted universe multiverse" > /etc/apt/sources.list
+RUN apt-get update
 
 # Add Erlang Solutions repository
 RUN echo "deb http://packages.erlang-solutions.com/debian raring contrib" >> /etc/apt/sources.list
+
+# Install wget
+RUN apt-get install -y wget
 
 # Add Key
 RUN wget http://packages.erlang-solutions.com/debian/erlang_solutions.asc
@@ -21,5 +25,4 @@ RUN apt-key add erlang_solutions.asc
 RUN apt-get update
 
 # install the Erland environment
-RUN apt-get install -y erlang erlang-doc erlang-manpages erlang-mode
-
+RUN apt-get install -y erlang erlang-doc erlang-manpages
