@@ -7,21 +7,15 @@
 FROM ubuntu:latest
 MAINTAINER Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
-# make sure the package repository is up to date
-RUN echo "deb http://archive.ubuntu.com/ubuntu raring main restricted universe multiverse" > /etc/apt/sources.list
+# install tools
+RUN apt-get install -y python-software-properties software-properties-common 
+
+# Add OPam PPA
+RUN add-apt-repository ppa:avsm/ocaml41+opam11
+
+# Update packages list
 RUN apt-get update
 
-# install tools
-RUN apt-get install -y python-software-properties software-properties-common
-
 # Install OCaml
-RUN apt-get install -y ocaml ocaml-findlib
-
-# Install Oasis
-RUN apt-get install -y oasis
-
-# Install OPAM
-#RUN add-apt-repository -y ppa:avsm/ppa
-#RUN apt-get update
-#RUN apt-get install -y opam
+RUN apt-get install -y ocaml opam
 
