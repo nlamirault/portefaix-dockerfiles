@@ -1,5 +1,5 @@
-Docker CommonLisp
-=================
+Docker OCaml
+============
 
 Container with [OCaml](http://ocaml.org/) and [OPAM](http://opam.ocamlpro.com/) installed.
 
