@@ -12,19 +12,19 @@ sleep 1
 
 # Build portefaix containers
 echo "Build Common Lisp container"
-sudo docker build -t nlamirault/commonlisp commonlisp
+docker build -t nlamirault/commonlisp commonlisp
 
 echo "Build Erlang container"
-sudo docker build -t nlamirault/erlang erlang
+docker build -t nlamirault/erlang erlang
 
 echo "Build GO container"
-sudo docker build -t nlamirault/go go
+docker build -t nlamirault/go go
 
 echo "Build Haskell container"
-sudo docker build -t nlamirault/haskell haskell
+docker build -t nlamirault/haskell haskell
 
 echo "Build OCaml container"
-sudo docker build -t nlamirault/ocaml ocaml
+docker build -t nlamirault/ocaml ocaml
 
 echo "Build Python container"
-sudo docker build -t nlamirault/python python
+docker build -t nlamirault/python python
