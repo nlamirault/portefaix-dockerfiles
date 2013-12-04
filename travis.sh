@@ -11,6 +11,8 @@ docker -d &
 sleep 1
 
 PORTEFAIX_HOME=`pwd`
+ls -R
+echo `pwd`
 
 echo "---------------------"
 echo "----- Portefaix -----"
@@ -18,32 +20,32 @@ echo "---------------------"
 
 # Build portefaix containers
 echo "--- Common Lisp container ---"
-cd ./commonlisp
+cd $PORTEFAIX_HOME/commonlisp
 docker build -t nlamirault/commonlisp . 
 cd $PORTEFAIX_HOME
 
 echo "--- Erlang container ---"
-cd ./erlang
+cd $PORTEFAIX_HOME/erlang
 docker build -t nlamirault/erlang
 cd $PORTEFAIX_HOME
 
 echo "--- GO container ---"
-cd ./go
+cd $PORTEFAIX_HOME/go
 docker build -t nlamirault/go .
 cd $PORTEFAIX_HOME
 
 echo "--- Haskell container ---"
-cd ./haskell
+cd $PORTEFAIX_HOME/haskell
 docker build -t nlamirault/haskell .
 cd $PORTEFAIX_HOME
 
 echo "--- OCaml container ---"
-cd ./ocaml
+cd $PORTEFAIX_HOME/ocaml
 docker build -t nlamirault/ocaml .
 cd $PORTEFAIX_HOME
 
 echo "--- Python container ---"
-cd ./python
+cd $PORTEFAIX_HOME/python
 docker build -t nlamirault/python .
 cd $PORTEFAIX_HOME
 
