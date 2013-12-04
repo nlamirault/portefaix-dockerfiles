@@ -10,9 +10,7 @@ trap 'kill $(jobs -p)' SIGINT SIGTERM EXIT
 docker -d &
 sleep 1
 
-PORTEFAIX_HOME=`pwd`
-ls -R
-echo `pwd`
+PORTEFAIX_HOME=`$(dirname "$0")`
 
 echo "---------------------"
 echo "----- Portefaix -----"
