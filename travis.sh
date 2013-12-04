@@ -18,7 +18,7 @@ echo "---------------------"
 
 # Build portefaix containers
 echo "--- Common Lisp container ---"
-cd ./commonslisp
+cd ./commonlisp
 docker build -t nlamirault/commonlisp . 
 cd $PORTEFAIX_HOME
 
@@ -28,22 +28,22 @@ docker build -t nlamirault/erlang
 cd $PORTEFAIX_HOME
 
 echo "--- GO container ---"
-cd go
+cd ./go
 docker build -t nlamirault/go .
 cd $PORTEFAIX_HOME
 
 echo "--- Haskell container ---"
-cd haskell
+cd ./haskell
 docker build -t nlamirault/haskell .
 cd $PORTEFAIX_HOME
 
 echo "--- OCaml container ---"
-cd ocaml
+cd ./ocaml
 docker build -t nlamirault/ocaml .
 cd $PORTEFAIX_HOME
 
 echo "--- Python container ---"
-cd python
+cd ./python
 docker build -t nlamirault/python .
 cd $PORTEFAIX_HOME
 
