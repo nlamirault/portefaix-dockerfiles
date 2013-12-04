@@ -30,7 +30,7 @@ cd $PORTEFAIX_HOME
 
 echo "--- GO container ---"
 cd $PORTEFAIX_HOME/go
-docker build -t nlamirault/go .
+#docker build -t nlamirault/go .
 
 echo "--- Haskell container ---"
 cd $PORTEFAIX_HOME/haskell
@@ -38,10 +38,10 @@ cd $PORTEFAIX_HOME/haskell
 
 echo "--- OCaml container ---"
 cd $PORTEFAIX_HOME/ocaml
-#docker build -t nlamirault/ocaml .
+docker build -t nlamirault/ocaml .
 
 echo "--- Python container ---"
 cd $PORTEFAIX_HOME/python
-#docker build -t nlamirault/python .
+docker build -t nlamirault/python .
 
 echo "--- Portefaix containers build done. ---"
