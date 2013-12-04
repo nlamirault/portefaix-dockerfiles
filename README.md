@@ -1,5 +1,6 @@
-Portefaix
-=========
+# Portefaix
+
+[![Build Status](https://travis-ci.org/nlamirault/divona.png)](https://travis-ci.org/nlamirault/divona)
 
 ## Description
 
@@ -9,7 +10,7 @@ Some docker containers.
 
 * Build the container :
 
-        $ docker build -t="<yourname>/<name>" .
+        $ docker build -t="<yourname>/<name>" <container>
 
 * Once the container is available, push it to the [Docker Index](index.docker.io) :
 
