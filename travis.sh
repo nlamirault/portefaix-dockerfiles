@@ -26,15 +26,15 @@ docker build -t nlamirault/commonlisp commonlisp
 
 echo "--- Erlang container ---"
 cd $PORTEFAIX_HOME
-#docker build -t nlamirault/erlang erlang
+docker build -t nlamirault/erlang erlang
 
 echo "--- GO container ---"
 cd $PORTEFAIX_HOME/go
-#docker build -t nlamirault/go .
+docker build -t nlamirault/go .
 
 echo "--- Haskell container ---"
 cd $PORTEFAIX_HOME/haskell
-#docker build -t nlamirault/haskell .
+docker build -t nlamirault/haskell .
 
 echo "--- OCaml container ---"
 cd $PORTEFAIX_HOME/ocaml
