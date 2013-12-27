@@ -1,0 +1,15 @@
+box: wercker-labs/docker
+build:
+    steps:
+        - script:
+            name: docker version
+            code: |
+                sudo docker version
+        - script:
+            name: docker build common lisp
+            code: |
+                sudo docker build -t nlamirault/commonlisp commonlisp
+        - script:
+            name: list images
+            code: |
+                sudo docker images
