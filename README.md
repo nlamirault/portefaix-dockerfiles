@@ -1,6 +1,5 @@
 # Portefaix
 
-[![Build Status](https://travis-ci.org/nlamirault/divona.png)](https://travis-ci.org/nlamirault/divona)
 [![wercker status](https://app.wercker.com/status/6da4f999772b5c2fed27596694256961 "wercker status")](https://app.wercker.com/project/bykey/6da4f999772b5c2fed27596694256961)
 
 ## Description
