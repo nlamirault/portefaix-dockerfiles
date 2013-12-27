@@ -10,6 +10,14 @@ build:
             code: |
                 sudo docker build -t nlamirault/commonlisp commonlisp
         - script:
+            name: docker build go
+            code: |
+                sudo docker build -t nlamirault/go go
+        - script:
+            name: docker build python
+            code: |
+                sudo docker build -t nlamirault/python python
+        - script:
             name: list images
             code: |
                 sudo docker images
