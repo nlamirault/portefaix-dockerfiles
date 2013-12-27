@@ -11,7 +11,7 @@ trap 'kill $(jobs -p)' SIGINT SIGTERM EXIT
 
 # Start docker daemon
 docker -d &
-sleep 1
+sleep 5
 
 echo "---------------------"
 echo "----- Portefaix -----"
